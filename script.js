@@ -4,14 +4,14 @@ let turn = 'X'
 let flag = 0
 let winMsg = document.querySelector('.winMsg')
 const winPattern = [
-  [0, 1, 2], //Row
-  [3, 4, 5], //Row
-  [6, 7, 8], //Row
-  [0, 3, 6], //Column
-  [1, 4, 7], //Column
-  [2, 5, 8], //Column
-  [0, 4, 8], //Diagonal
-  [6, 4, 2] //Diagonal
+  [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8],
+  [0, 3, 6],
+  [1, 4, 7],
+  [2, 5, 8],
+  [0, 4, 8],
+  [6, 4, 2]
 ]
 let gameOver = false
 boxes.forEach(box => {
@@ -44,7 +44,6 @@ function checkWinner () {
     let b = boxes[wins[1]].innerText
     let c = boxes[wins[2]].innerText
     if (a != '' && a === b && a === c) {
-      console.log(a, 'Wins')
       winMsg.innerText = `${a} Wins!`
       gameOver = true
     }
